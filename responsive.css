@@ -1,0 +1,190 @@
+:root {
+    /* Responsive breakpoints */
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1536px;
+
+    /* Responsive font sizes */
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+    --text-6xl: 4rem;
+}
+
+/* Responsive grid utilities */
+.grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+/* Responsive card utilities */
+.card-responsive {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Responsive table utilities */
+.table-responsive {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive th,
+.table-responsive td {
+    white-space: nowrap;
+}
+
+/* Responsive form utilities */
+.form-group-responsive {
+    width: 100%;
+}
+
+.form-group-responsive input,
+.form-group-responsive select,
+.form-group-responsive textarea {
+    width: 100%;
+}
+
+/* Responsive button utilities */
+.btn-responsive {
+    width: 100%;
+}
+
+@media (min-width: var(--breakpoint-sm)) {
+    .sm\:grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sm\:grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .sm\:grid-cols-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: var(--breakpoint-md)) {
+    .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .md\:grid-cols-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .md\:hidden {
+        display: none !important;
+    }
+    
+    .md\:block {
+        display: block !important;
+    }
+}
+
+@media (min-width: var(--breakpoint-lg)) {
+    .lg\:grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .lg\:grid-cols-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Responsive navigation utilities */
+.nav-responsive {
+    display: none;
+}
+
+@media (min-width: var(--breakpoint-md)) {
+    .nav-responsive {
+        display: flex;
+    }
+}
+
+/* Responsive modal utilities */
+.modal-responsive {
+    width: 90%;
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+@media (min-width: var(--breakpoint-md)) {
+    .modal-responsive {
+        width: 80%;
+        max-width: 800px;
+    }
+}
+
+/* Responsive image utilities */
+.img-responsive {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive spacing utilities */
+.space-responsive-2xl {
+    gap: 2rem;
+}
+
+@media (min-width: var(--breakpoint-md)) {
+    .space-responsive-2xl {
+        gap: 3rem;
+    }
+}
+
+/* Responsive text utilities */
+.text-responsive-xl {
+    font-size: var(--text-xl);
+}
+
+@media (min-width: var(--breakpoint-lg)) {
+    .text-responsive-xl {
+        font-size: var(--text-2xl);
+    }
+}
+
+/* Responsive button size utilities */
+.btn-responsive-lg {
+    padding: 0.5rem 1rem;
+    font-size: var(--text-base);
+}
+
+@media (min-width: var(--breakpoint-md)) {
+    .btn-responsive-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: var(--text-lg);
+    }
+}
+
+/* Responsive form control utilities */
+.form-control-responsive {
+    padding: 0.5rem;
+    font-size: var(--text-base);
+}
+
+@media (min-width: var(--breakpoint-md)) {
+    .form-control-responsive {
+        padding: 0.75rem;
+        font-size: var(--text-lg);
+    }
+}

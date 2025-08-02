@@ -1,0 +1,187 @@
+:root {
+    --primary-color: #3b82f6;
+    --secondary-color: #1e40af;
+    --success-color: #22c55e;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --background-color: #f8fafc;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+}
+
+/* Chatbot Styles */
+#chatbot-widget {
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+#chatbot-modal {
+    backdrop-filter: blur(5px);
+    z-index: 1001;
+}
+
+#chatbot-modal .bg-white {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Ticket Status Colors */
+.ticket-status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-open {
+    background-color: #e0e7ff;
+    color: #3b82f6;
+}
+
+.status-in-progress {
+    background-color: #fef9c3;
+    color: #f59e0b;
+}
+
+.status-resolved {
+    background-color: #dcfce7;
+    color: #22c55e;
+}
+
+.status-closed {
+    background-color: #fee2e2;
+    color: #ef4444;
+}
+
+/* Dashboard Table Styles */
+.ticket-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.ticket-table th {
+    background-color: #f9fafb;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+.ticket-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Notification Styles */
+.notification-banner {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #3b82f6;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease-out;
+    z-index: 1000;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] {
+    --background-color: #1f2937;
+    --text-color: #f3f4f6;
+    --card-bg: #111827;
+}
+
+[data-theme="dark"] body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .bg-white {
+    background-color: var(--card-bg);
+}
+
+[data-theme="dark"] .text-gray-700 {
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ticket-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .ticket-table th,
+    .ticket-table td {
+        min-width: 150px;
+    }
+}
+
+/* Password field with eye icon styles */
+.password-field {
+    position: relative;
+}
+
+.password-field input[type="password"],
+.password-field input[type="text"] {
+    padding-right: 2.5rem;
+}
+
+.password-toggle-btn {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s ease;
+}
+
+.password-toggle-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.password-toggle-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.password-toggle-btn svg {
+    transition: color 0.2s ease;
+}
+
+.password-toggle-btn:hover svg {
+    color: #4b5563;
+}
+
+/* Dark mode support for password field */
+.dark .password-toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .password-toggle-btn svg {
+    color: #9ca3af;
+}
+
+.dark .password-toggle-btn:hover svg {
+    color: #d1d5db;
+}
